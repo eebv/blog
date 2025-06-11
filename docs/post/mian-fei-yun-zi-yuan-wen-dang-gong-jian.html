@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="云
+IaaS指提供系统（可以自己选）或者储存空间之类的硬件，软件要自己手动装。">
+<meta property="og:title" content="免费云资源文档共建">
+<meta property="og:description" content="云
+IaaS指提供系统（可以自己选）或者储存空间之类的硬件，软件要自己手动装。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://eebv.github.io/blog/post/mian-fei-yun-zi-yuan-wen-dang-gong-jian.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>免费云资源文档共建</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">免费云资源文档共建</h1>
+<div class="title-right">
+    <a href="https://eebv.github.io/blog" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/eebv/blog/issues/2" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>云<br>
+IaaS指提供系统（可以自己选）或者储存空间之类的硬件，软件要自己手动装。PaaS提供语言环境和框架（可以自己选）。SaaS只能使用开发好的软件（卖软件本身，如税务会计、表格文字处理）。BaaS一般类似于非关系数据库，但各家不通用<br>
+云服务的特点：零前期成本 &amp; 按需付费 &amp; 弹性（类似于租，可随时多加、退掉；但没有残值）、高可用（放在机房中，不同AZ间水电隔离）<br>
+其他人的集合</p>
+<p><a href="https://education.github.com/pack">https://education.github.com/pack</a> GitHub学生包，需用教育邮箱验证。各种福利</p>
+<p>Paas<br>
+<a href="https://www.divio.com/" rel="nofollow">https://www.divio.com/</a> 基于docker，预定义django node springboot。0.5G内存，5G对象存储，10G传输(到自带的CDN)，1G数据库(PG/MySQL)。30分钟不活跃后睡眠。账号需每60天登录。命令行：pipx install divio-cli; clone项目; divio app configure 输入已建立的项目名; divio app deploy [live]。push/pull db/media [live] 上传下载数据库和对象储存的数据，数据库还有import export，ssh连接上一个新建实例<br>
+<a href="https://render.com/" rel="nofollow">https://render.com/</a> node py go pg<br>
+<a href="https://www.koyeb.com/" rel="nofollow">https://www.koyeb.com/</a> docker node py go 0.5G内存<br>
+<a href="https://qoddi.com/" rel="nofollow">https://qoddi.com/</a> 不支持protonmail<br>
+<a href="https://www.lade.io/" rel="nofollow">https://www.lade.io/</a> go node php py 128M内存 1G硬盘和数据库 100G流量。不会休眠<br>
+<a href="https://domcloud.co/" rel="nofollow">https://domcloud.co/</a> 1.5G储存 2G流量 有SSH。但实测无法成功添加项目，也没有任何报错<br>
+<a href="https://genezio.com/pricing/" rel="nofollow">Genezio | Pricing</a><br>
+<a href="https://wso2.com/choreo/pricing/" rel="nofollow">https://wso2.com/choreo/pricing/</a><br>
+<a href="https://docs.marscode.cn/docs/limitations" rel="nofollow">https://docs.marscode.cn/docs/limitations</a><br>
+<a href="https://www.clever-cloud.com/en/pricing" rel="nofollow">Pricing | Clever Cloud</a> 送20€只会送一次，可以用4个月。不清楚是否能注销反复注册<br>
+<a href="https://www.brightbox.com/pricing/" rel="nofollow">Cloud Server Pricing - Brightbox</a> 最低配可以用10个月<br>
+<a href="https://www.pythonanywhere.com/" rel="nofollow">https://www.pythonanywhere.com/</a> 限制非常多，免费账户不允许访问白名单之外的网站。但好歹能提供一个自动https的web app<br>
+<a href="https://www.myasp.net/hosting_plans" rel="nofollow">Unlimited ASP.NET hosting, MVC hosting, Free ASP.NET hosting</a> 免费两个月但好像能免费续期<br>
+云端空间/IDE<br>
+<a href="https://cloudstudio.net/" rel="nofollow">https://cloudstudio.net/</a> 腾讯，服务器在上海。老地址 <a href="http://xn--eqr924avxo.cloudstudio.net/" rel="nofollow">用户名.cloudstudio.net</a> 也可用但需实名，还有ide.cloud.tencent.com是“专业版”。<a href="https://inscode.csdn.net/" rel="nofollow">https://inscode.csdn.net/</a> 1核2G 类似于REPL.IT<br>
+<a href="https://www.gitpod.io/" rel="nofollow">https://www.gitpod.io/</a> VSC，免费版每月50小时，支持在本地打开；专业版在学生包里免费6个月但要求Primary Email是学校的账户<br>
+GitHub Codespaces：每月免费60小时<br>
+<a href="https://workspaces.openshift.com/" rel="nofollow">https://workspaces.openshift.com/</a> 魔改VSC，不支持扩展，国内访问慢；<a href="http://xn--codenvyche-922py89a17g1x0e.openshift.io/" rel="nofollow">之前是codenvy和che.openshift.io</a><br>
+<a href="https://paiza.cloud/en/" rel="nofollow">PaizaCloud Cloud IDE - Browser-based web development environment for Ruby on Rails, PHP, Java, Django, Node.js...</a> 日产，好像还支持SSH连上去，但免费版好像24小时就清除了<br>
+<a href="https://codetasty.com/" rel="nofollow">https://codetasty.com/</a> 说是有SSH workspace<br>
+<a href="https://ide.goorm.io/pricing" rel="nofollow">https://ide.goorm.io/pricing</a> 可以建立五个工作区，可以用SSH连上去，每月免费20小时。好像是自制的，界面完成度蛮高的，有终端，但没有intellisense，只能玩玩。好像可以运行docker容器？<br>
+<a href="https://www.tutorialspoint.com/codingground.htm" rel="nofollow">Online Programming Compilers and Editors</a> <a href="https://ideone.com/" rel="nofollow">https://ideone.com/</a> <a href="https://coliru.stacked-crooked.com/" rel="nofollow">https://coliru.stacked-crooked.com/</a> <a href="https://wandbox.org/" rel="nofollow">https://wandbox.org/</a> <a href="https://tio.run/" rel="nofollow">https://tio.run/</a> <a href="https://code.xueersi.com/ide/code/1" rel="nofollow">学而思编程-学而思网校-受益一生的能力</a> <a href="https://jsrun.net/" rel="nofollow">https://jsrun.net/</a> <a href="https://www.jdoodle.com/" rel="nofollow">https://www.jdoodle.com/</a> <a href="https://rextester.com/" rel="nofollow">https://rextester.com/</a> <a href="https://ide.progman.in/" rel="nofollow">https://ide.progman.in/</a> <a href="https://glot.io/" rel="nofollow">https://glot.io/</a> <a href="https://onecompiler.com/" rel="nofollow">https://onecompiler.com/</a> <a href="https://www.onlinegdb.com/" rel="nofollow">https://www.onlinegdb.com/</a> <a href="https://www.mycompiler.io/" rel="nofollow">https://www.mycompiler.io/</a> 无需登录，能执行许多语言，但只能说能运行代码，称不上IDE。<a href="https://www.codiva.io/" rel="nofollow">https://www.codiva.io/</a> 有一点intellisense<br>
+<a href="https://www.keil.arm.com/" rel="nofollow">https://www.keil.arm.com/</a><br>
+前端在线IDE<br>
+<a href="https://jsbin.com/" rel="nofollow">https://jsbin.com/</a> 简洁，无需注册，开源。国内搭建的：<a href="https://code.h5jun.com/" rel="nofollow">https://code.h5jun.com/</a><br>
+<a href="https://codepen.io/" rel="nofollow">https://codepen.io/</a> 可不注册<br>
+<a href="https://stackblitz.com/" rel="nofollow">https://stackblitz.com/</a> 基于VSC Web版，无服务器，但基于wasm允许运行终端、node包括npm等、一点点linux命令<br>
+<a href="https://codesandbox.io/" rel="nofollow">https://codesandbox.io/</a><br>
+<a href="https://bit.dev/" rel="nofollow">https://bit.dev/</a> RST<br>
+<a href="https://www.codeply.com/" rel="nofollow">https://www.codeply.com/</a><br>
+<a href="https://plnkr.co/" rel="nofollow">https://plnkr.co/</a> 比较简陋<br>
+<a href="https://jsfiddle.net/" rel="nofollow">https://jsfiddle.net/</a> 我这里打不开，且感觉是他们封的我们<br>
+<a href="https://backlight.dev/" rel="nofollow">https://backlight.dev/</a> <a href="https://webcomponents.dev/" rel="nofollow">https://webcomponents.dev/</a><br>
+<a href="https://coderpad.io/" rel="nofollow">https://coderpad.io/</a><br>
+<a href="https://code.juejin.cn/" rel="nofollow">https://code.juejin.cn/</a><br>
+Jupyter Notebook/Lab 大数据机器学习平台<br>
+<a href="https://tianchi.aliyun.com/notebook-ai/home" rel="nofollow">天池实验室_实时在线的数据分析协作工具，享受免费计算资源-阿里云天池</a> 免费gpu 60小时/年。登录要用阿里云账号，不想记住密码，每次都要用手机扫很麻烦，有时还要短信二次验证<br>
+<a href="https://aistudio.baidu.com/" rel="nofollow">https://aistudio.baidu.com/</a> 需“完善信息”，要姓名手机号<br>
+<a href="https://www.kaggle.com/" rel="nofollow">https://www.kaggle.com/</a> 验证电话后有免费gpu和外网，能连续运行9小时，有机器学习的教程<br>
+<a href="https://www.heywhale.com/home/project" rel="nofollow">https://www.heywhale.com/home/project</a> 国产<br>
+<a href="https://datalore.jetbrains.com/" rel="nofollow">https://datalore.jetbrains.com/</a><br>
+<a href="https://jupyter.org/try" rel="nofollow">Project Jupyter | Try Jupyter</a> 官方，资源非常少，有C++；mybinder可以从GitHub仓库建立临时NB<br>
+<a href="https://deepnote.com/" rel="nofollow">https://deepnote.com/</a> 5G RAM<br>
+<a href="https://lab.datafountain.cn/" rel="nofollow">https://lab.datafountain.cn/</a> 国产，CCF<br>
+<a href="https://www.datacastle.cn/" rel="nofollow">https://www.datacastle.cn/</a> 国产，每月免费40h，2C8G<br>
+<a href="https://cocalc.com/doc/jupyter-notebook.html" rel="nofollow">Online Jupyter Notebooks</a> 可能收费<br>
+数据库DBaaS<br>
+<a href="https://sqlpub.com/" rel="nofollow">https://sqlpub.com/</a> MySQL8，国产，500MB<br>
+<a href="https://db4free.net/" rel="nofollow">https://db4free.net/</a> mysql 200M<br>
+<a href="https://freedb.tech/" rel="nofollow">https://freedb.tech/</a> MySQL8 50MB 一段时间不用会自动删除<br>
+<a href="https://memfiredb.com/" rel="nofollow">https://memfiredb.com/</a> 兼容PG11，国产，500MB<br>
+<a href="https://www.freemysqlhosting.net/" rel="nofollow">https://www.freemysqlhosting.net/</a> mysql 5.5，5MB，每周会收到要手动操作来延期的邮件<br>
+<a href="https://dbhub.io/" rel="nofollow">https://dbhub.io/</a> SQLite，以HTTPAPI使用，基本上是用git存文件，不过允许用API查询，修改则要下下来<br>
+<a href="https://www.datastax.com/products/datastax-astra/pricing" rel="nofollow">Pricing | DataStax</a> ApacheCassandra(大数据NoSQL)<br>
+BaaS<br>
+<a href="https://www.bmobapp.com/" rel="nofollow">https://www.bmobapp.com/</a><br>
+<a href="https://www.leancloud.cn/pricing/" rel="nofollow">价格 - LeanCloud</a><br>
+<a href="https://firebase.google.cn/pricing" rel="nofollow">Firebase Pricing</a> 用处：<a href="https://zhuanlan.zhihu.com/p/95334890" rel="nofollow">https://zhuanlan.zhihu.com/p/95334890</a><br>
+<a href="https://www.zhihu.com/question/34124789/answer/72495188" rel="nofollow">https://www.zhihu.com/question/34124789/answer/72495188</a><br>
+<a href="https://www.8base.com/" rel="nofollow">https://www.8base.com/</a> GraphQL<br>
+<a href="https://www.easycsv.io/pricing" rel="nofollow">EasyCSV Pricing &amp; Plans</a><br>
+JSON<br>
+<a href="https://jsonbin.io/" rel="nofollow">https://jsonbin.io/</a><br>
+<a href="https://extendsclass.com/json-storage.html" rel="nofollow">Free JSON storage over HTTP API</a><br>
+<a href="https://json.psty.io/" rel="nofollow">https://json.psty.io/</a><br>
+<a href="https://www.jsonstorage.net/" rel="nofollow">https://www.jsonstorage.net/</a> 有无需注册的<br>
+<a href="https://hygraph.com/" rel="nofollow">https://hygraph.com/</a> Headless CMS<br>
+<a href="https://appwrite.io/" rel="nofollow">https://appwrite.io/</a> 提供方便后端开发的一些内容，如点击流量监控、储存、云函数<br>
+<a href="https://www.bitiful.com/" rel="nofollow">https://www.bitiful.com/</a> 对象储存，免费50G+流量30G<br>
+Managed K8S<br>
+<a href="https://www.redhat.com/zh/technologies/cloud-computing/openshift" rel="nofollow">红帽 OpenShift 企业应用平台</a> 每60天清除<br>
+<a href="https://okteto.com/pricing" rel="nofollow">Pricing</a> 免费版2CPU，4G内存，10G储存。刚注册送一个月pro，不付款自动降到免费版。免费版24小时不活动就sleep。原意是为开发者日常开发使用的<br>
+<a href="https://labs.play-with-k8s.com/" rel="nofollow">https://labs.play-with-k8s.com/</a> 好像每天只有四小时；<a href="https://labs.play-with-docker.com/" rel="nofollow">https://labs.play-with-docker.com/</a><br>
+zarvis.ai <a href="http://staroid.com/" rel="nofollow">staroid.com</a> 网页都用的是Google的服务器，无法直接访问<br>
+<a href="https://kubesail.com/" rel="nofollow">https://kubesail.com/</a> 停止免费版了，不过还是能作为管理平台<br>
+<a href="https://loft.sh/" rel="nofollow">https://loft.sh/</a> 好像只是客户端或者管理平台<br>
+Serverless/Node Paas（无状态的api）<br>
+<a href="https://runkit.com/" rel="nofollow">https://runkit.com/</a> exports.endpoint = (req, resp) =&gt; resp.end('hello world')，支持require()引用库。req是<a href="https://nodejs.org/docs/latest/api/http.html#class-httpincomingmessage" rel="nofollow">HTTP | Node.js v24.1.0 Documentation</a> resp是OutgoingMessage。文档里有创建jsonendpoint和express<br>
+<a href="https://glitch.com/" rel="nofollow">https://glitch.com/</a><br>
+<a href="https://workers.cloudflare.com/" rel="nofollow">https://workers.cloudflare.com/</a> 官方域名污染+RST<br>
+<a href="https://vercel.com/" rel="nofollow">https://vercel.com/</a> node go py 官方域名污染+RST<br>
+<a href="https://deno.com/deploy" rel="nofollow">Deno Deploy</a><br>
+<a href="https://pipedream.com/" rel="nofollow">https://pipedream.com/</a><br>
+<a href="https://keen.io/" rel="nofollow">https://keen.io/</a><br>
+<a href="https://www.cloud66.com/pricing/" rel="nofollow">Cloud 66 Plans and Pricing</a><br>
+<a href="https://encore.dev/" rel="nofollow">https://encore.dev/</a><br>
+谷歌的functions有一些免费额度，但一定会产生部署费用，最少$0.03/mo<br>
+国内的云服务厂商一般都有FaaS服务，也有一定的免费额度，但问题是公网流出流量是没有免费额度的<br>
+<a href="https://www.slappforge.com/sigma" rel="nofollow">Blog - SlappForge.com</a> 仅开发平台<br>
+<a href="https://catalyst.zoho.com/" rel="nofollow">https://catalyst.zoho.com/</a><br>
+<a href="https://wundergraph.com/" rel="nofollow">https://wundergraph.com/</a><br>
+<a href="https://www.val.town/" rel="nofollow">https://www.val.town/</a><br>
+<a href="https://zeabur.com/" rel="nofollow">https://zeabur.com/</a><br>
+<a href="https://www.napkin.io/" rel="nofollow">https://www.napkin.io/</a><br>
+<a href="https://www.digitalocean.com/pricing/functions" rel="nofollow">Functions Pricing | DigitalOcean</a> 超额可能被收费，无法移除信用卡<br>
+<a href="https://www.fastly.com/pricing/" rel="nofollow">Edge cloud pricing</a> 也有CDN<br>
+静态网页托管<br>
+<a href="https://surge.sh/" rel="nofollow">https://surge.sh/</a><br>
+<a href="https://www.netlify.com/" rel="nofollow">https://www.netlify.com/</a> 也支持js云函数<br>
+<a href="https://pages.cloudflare.com/" rel="nofollow">https://pages.cloudflare.com/</a><br>
+不能从github自动拉取的<br>
+<a href="https://tiiny.host/" rel="nofollow">https://tiiny.host/</a> 每三个月要登录<br>
+<a href="https://statichost.host/" rel="nofollow">https://statichost.host/</a><br>
+也许可用的IaaS<br>
+AWS：有12个月的free tier，如每月750小时EC2。但无法设定限制，用超了会扣费，只能设定警告。Amazon Lambda和DynamoDB有无限时的<br>
+euserv，德国的，只有IPV6，亲测确实可以，但硬盘很慢。现在好像要收setup fee<br>
+<a href="https://activity.xinruiyun.cn/free/" rel="nofollow">https://activity.xinruiyun.cn/free/</a> 新睿云，发个广告可以免费用一个月的ECS<br>
+<a href="https://www.oracle.com/cn/cloud/free/" rel="nofollow">Oracle Cloud 免费套餐 | Oracle 中国</a> 体验文章：<a href="https://51.ruyo.net/14138.html" rel="nofollow">申请Oracle Cloud永久免费服务+300美元试用额度 - 如有乐享</a> 不支持prepaid card；<a href="https://www.blueskyxn.com/202109/5232.html" rel="nofollow">https://www.blueskyxn.com/202109/5232.html</a> 实测多次申请从未成功<br>
+<a href="https://www.atlantic.net/" rel="nofollow">https://www.atlantic.net/</a> 免费12个月，需要信用卡<br>
+<a href="https://hax.co.id/" rel="nofollow">https://hax.co.id/</a> <a href="https://woiden.id/" rel="nofollow">https://woiden.id/</a> 注册仅需一个tg账号，不用信用卡。理论永久免费，需要每周手动续订一下<br>
+<a href="https://microlxc.net/" rel="nofollow">https://microlxc.net/</a> <a href="https://nanokvm.net/" rel="nofollow">https://nanokvm.net/</a> 需要注册 <a href="https://lowendtalk.com/" rel="nofollow">https://lowendtalk.com/</a> 满足一定条件才能申请<br>
+谷歌云、Yandex Cloud<br>
+<a href="https://open.iot.10086.cn/" rel="nofollow">https://open.iot.10086.cn/</a> OneNET移动的，目前没啥免费的内容<br>
+<a href="https://evolution-host.com/free-vps.php" rel="nofollow">Free VPS - Get a free Evolution Host VPS</a> 需要一个有流量的网站放它们的广告<br>
+<a href="https://www.vultr.com/free-tier-program/" rel="nofollow">https://www.vultr.com/free-tier-program/</a><br>
+<a href="https://www.mywindowshosting.com/" rel="nofollow">https://www.mywindowshosting.com/</a> <a href="https://www.smarterasp.net/free_trial" rel="nofollow">Free ASP.NET Hosting</a> 免费2个月<br>
+<a href="https://linuxone.cloud.marist.edu/" rel="nofollow">https://linuxone.cloud.marist.edu/</a> 根据 <a href="https://www.marist.edu/w/marist-first-linuxone-iii" rel="nofollow">Marist College Installs World’s First IBM LinuxONE III™ - Marist University</a> 里说的全世界都能用。需要申请和审核。不是x86和arm的，是s390x大型机架构 <a href="https://www.bilibili.com/read/cv18887922/" rel="nofollow">[白嫖IBM LinucONE服务器系列]4 通过docker运行x86、arm应用 - 哔哩哔哩</a><br>
+<a href="https://onevm.uk.to/" rel="nofollow">https://onevm.uk.to/</a> <a href="https://github.com/ripienaar/free-for-dev/pull/3506" data-hovercard-type="pull_request" data-hovercard-url="/ripienaar/free-for-dev/pull/3506/hovercard">Add One VM (Add OneVM Back) by PlurrYT-Kolama · Pull Request #3506 · ripienaar/free-for-dev · GitHub</a><br>
+<a href="https://azure.microsoft.com/zh-cn/free/students/" rel="nofollow">微软Azure</a><br>
+学生验证后无需信用卡，有12个月一次性$100的额度；非学生则需信用卡且只有1个月$200的额度。二者都享受12个月的某些项目的免费，一定要看查看所有免费服务里列举的项目。比如VM只有B1、B2ats每月免费750小时，内存只有1G；“托管磁盘”必须选64GB(P6)，更小的反而不免费。没有提到公网IP有免费的，实际上默认选的静态IP是收费的，创建的第一个“基本动态公共IP”才免费，机器关机时会变，如果选保留会自动改为静态，且2025年10月后只能创建“标准”，但IPV6不收费。每月免费100GB输出流量，输入免费。只有世界站，国内站无法注册<br>
+学生订阅一年到期后可以续订，因此不要舍不得启用机会。但注意不要消耗完$100，否则订阅会提前结束<br>
+查看余额：<a href="https://portal.azure.com/#view/Microsoft_Azure_Education/EducationMenuBlade" rel="nofollow">Microsoft Azure</a> 查看具体哪项服务消耗了：“查看成本详细信息”-Usage Details。学生版不支持“成本管理”<br>
+免费项目：<a href="https://portal.azure.com/#view/Microsoft_Azure_Billing/FreeServicesBlade" rel="nofollow">Microsoft Azure</a> 和 <a href="https://azure.microsoft.com/zh-cn/free/students/" rel="nofollow">https://azure.microsoft.com/zh-cn/free/students/</a> 的“查看所有免费服务”<br>
+<a href="https://51.ruyo.net/14583.html" rel="nofollow">https://51.ruyo.net/14583.html</a><br>
+永久免费：app service(paas F1计划每天1小时cpu 1G内存 1G储存)、Container Apps(180000 vCPU秒,360000 GiB秒,2百万请求)、函数计算(请求次数、内存×秒 均上百万)、静态网页(100G流量, 0.5G储存)、SQL DB(100000 vCPU秒,32G储存)、AI Speech(STT 5小时,TTS 50万字)、AI Search(50MB)、翻译(2百万字)、流量(100G)、Cloud Shell(5G空间保留12个月)、面部识别(3万)<br>
+如果试用过期了，必须要启用Pay-As-You-Go的订阅才能使用，如果超额了或没意识到会收费。不知道Basic标准支持行不行。Azure for Students Starter is no longer available<br>
+必须给“工作账户”启用MFA：在 <a href="https://entra.microsoft.com/" rel="nofollow">https://entra.microsoft.com/</a> 中，保护-身份验证方法-策略-短信 启用，在用户中找到自己“工作账户”的邮箱，访问 <a href="https://login.microsoftonline.com/" rel="nofollow">https://login.microsoftonline.com/</a> 登录，重置密码，会发送到普通的outlook邮箱中，设置密码登录后就有流程提示设置MFA，选其他方式就可不用APP。实测无法直接在entra里添加：用户-分配的角色-添加 特权身份验证管理员，身份验证方法 还是灰的<br>
+其他不在资源里但有用的功能：监视器、成本管理+计费 - 成本管理 - 使用情况+费用（学生版无法使用）、订阅<br>
+网络<br>
+网络接口 - 加速网络(更快的网络连接)：好像把VM关机后才能开，感觉没副作用。但不清楚是否只对VPC内访问才会加速。另有“NVA加速连接”是要收费的，目前还在测试<br>
+对等连接：创建免费，流量好像单独收费，即可能不会使用BandWidth免费额度，见vnet定价页。使用后两者可以互通，就像在同一个vpc内一样<br>
+Bastion（没用）：网页RDP客户端，无需公开VM的IP即可访问VPC，开发者版免费5G流量，但开发者版区域有限制，如果和VM不在同一个VPC中就用不了。也许开对等连接后可以用<br>
+不免费：机器学习(notebook)<br>
+<a href="https://www.ibm.com/cn-zh/cloud/free" rel="nofollow">IBM Cloud</a><br>
+Lite(轻量)版无需信用卡，没有到期时间，完全不会变到付费套餐上，额度到了就无法使用<br>
+对象储存：25GB储存，5GB出站；Cloudant JSON文档数据库：1GB；DB2数据库：200MB，每90天要邮件延期<br>
+Cloud for Education：持续时间一小时的ECS，能用RDP连上但卡到完全无法使用，好像无外部互联网连接<br>
+机器学习<br>
+Docker Registry：储存0.5GB，流量5GB<br>
+那些“软件”虽然有非常多免费的，但必须部署到k8s上；k8s也有免费套餐，但lite无法创建，因为流量和IP可能要收费<br>
+函数计算：免费30万GB秒<br>
+<a href="https://cloud.tencent.com/act/free" rel="nofollow">腾讯云</a><br>
+对象储存：50GB半年<br>
+机器翻译：500万字符/月，开通免费版必不会收任何费用<br>
+云托管 CloudBase Run：不知道干什么用的<br>
+<a href="https://free.aliyun.com/" rel="nofollow">阿里云</a><br>
+<a href="https://university.aliyun.com/" rel="nofollow">https://university.aliyun.com/</a> 学生认证 ￥300 只能买页面上的产品，2C2G；可能可以买轻量云服务器2C4G一年<br>
+MaxCompute大数据计算服务开发者版 <a href="https://www.aliyun.com/product/odps" rel="nofollow">https://www.aliyun.com/product/odps</a><br>
+云效DevOps有一些免费额度，包括5GB Maven仓库<br>
+机器翻译通用版：每月100万字符免费额度<br>
+容器镜像仓库100个<br>
+pdf/图片转word：一年1000页<br>
+DCDN：一年50GB<br>
+自选 .xyz .top .love 一年<br>
+<a href="https://activity.huaweicloud.com/free_test/index.html" rel="nofollow">华为云</a><br>
+20张DV证书<br>
+函数工作流FunctionGraph：每月100万次的免费请求，400,000GB秒的免费执行时间，如果用256MB内存可执行444小时。但是出入流量要买APIG<br>
+云日志：一定要关闭“超额继续采集日志”<br>
+开发者空间：Ubuntu桌面环境网页版，看起来可以无限使用，每小时点一次续期即可 <a href="https://developer.huaweicloud.com/space/devportal/desktop" rel="nofollow">https://developer.huaweicloud.com/space/devportal/desktop</a><br>
+定时任务<br>
+<a href="https://www.cronjobservices.com/" rel="nofollow">https://www.cronjobservices.com/</a> 收集<br>
+Cronless好像可用<br>
+EasyCron：每月要重新激活<br>
+<a href="https://cronitor.io/" rel="nofollow">https://cronitor.io/</a><br>
+未分类<br>
+<a href="https://www.litespeedtech.com/experience-litespeed-for-free" rel="nofollow">https://www.litespeedtech.com/experience-litespeed-for-free</a> 一个月有效？需要姓名，电话，邮箱，地址。好像只有wordpress，还是只有软件？<br>
+有可能与Jupyter有关：<br>
+<a href="https://www.dataquest.io/plans-pricing/" rel="nofollow">https://www.dataquest.io/plans-pricing/</a><br>
+<a href="https://mode.com/compare-plans/" rel="nofollow">https://mode.com/compare-plans/</a><br>
+<a href="https://studio.azureml.net/" rel="nofollow">https://studio.azureml.net/</a> 可视化机器学习实验工具，可不登陆使用<br>
+<a href="https://apis.baidu.com/" rel="nofollow">https://apis.baidu.com/</a><br>
+<a href="https://www.uffizzi.com/" rel="nofollow">https://www.uffizzi.com/</a> 在PR中生成预览环境，支持后端服务<br>
+API聚合<br>
+<a href="https://rapidapi.com/" rel="nofollow">https://rapidapi.com/</a> 只是一个平台，经过它反代到各个提供者的服务器上，大部分质量很低，速度超慢。作为提供者大概简化了收费和验证途径吧。有点用的：simple-file-storage、secure-storage、postput。各种cors-proxy反代。ProxyPage代理ip<br>
+<a href="https://apilayer.com/" rel="nofollow">https://apilayer.com/</a><br>
+<a href="https://www.lafyun.com/" rel="nofollow">https://www.lafyun.com/</a></p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://eebv.github.io/blog">Blog Title</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","eebv/blog");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
